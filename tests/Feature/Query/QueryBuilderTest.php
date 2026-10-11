@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Query\EventFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\PageFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryBuilder;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryDescriptor;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryResponse;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Query\EventFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\PageFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryBuilder;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryDescriptor;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryResponse;
 
 it('sends type count in every payload', function (): void {
     fakeQueryResponse();

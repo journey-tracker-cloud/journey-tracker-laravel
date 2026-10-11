@@ -9,11 +9,11 @@ use Illuminate\Session\Store;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedEventData;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedTagData;
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
-use Jpeters8889\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedEventData;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedTagData;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware;
 use Tests\TestCase;
 
 pest()->extend(TestCase::class)->in('Unit', 'Feature');

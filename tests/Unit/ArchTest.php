@@ -2,39 +2,39 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Symfony\Component\Finder\Finder;
 
 arch('the package declares strict types throughout')
-    ->expect('Jpeters8889\JourneyTrackerLaravel')
+    ->expect('JourneyTracker\JourneyTrackerLaravel')
     ->toUseStrictTypes();
 
 arch('data objects are immutable value objects')
-    ->expect('Jpeters8889\JourneyTrackerLaravel\DataObjects')
+    ->expect('JourneyTracker\JourneyTrackerLaravel\DataObjects')
     ->toBeFinal()
     ->toBeReadonly();
 
 arch('data objects stay behind the layers that queue them')
-    ->expect('Jpeters8889\JourneyTrackerLaravel\DataObjects')
+    ->expect('JourneyTracker\JourneyTrackerLaravel\DataObjects')
     ->toOnlyBeUsedIn([
-        'Jpeters8889\JourneyTrackerLaravel\DataObjects',
-        'Jpeters8889\JourneyTrackerLaravel\Http',
-        'Jpeters8889\JourneyTrackerLaravel\Jobs',
+        'JourneyTracker\JourneyTrackerLaravel\DataObjects',
+        'JourneyTracker\JourneyTrackerLaravel\Http',
+        'JourneyTracker\JourneyTrackerLaravel\Jobs',
         JourneyTracker::class,
     ]);
 
 arch('events are immutable value objects')
-    ->expect('Jpeters8889\JourneyTrackerLaravel\Events')
+    ->expect('JourneyTracker\JourneyTrackerLaravel\Events')
     ->toBeFinal()
     ->toBeReadonly();
 
 arch('every job is queueable')
-    ->expect('Jpeters8889\JourneyTrackerLaravel\Jobs')
+    ->expect('JourneyTracker\JourneyTrackerLaravel\Jobs')
     ->toImplement(ShouldQueue::class);
 
 arch('event types are string backed')
-    ->expect('Jpeters8889\JourneyTrackerLaravel\Enums')
+    ->expect('JourneyTracker\JourneyTrackerLaravel\Enums')
     ->toBeStringBackedEnums();
 
 it('declares no mutable static properties anywhere in src', function (): void {
@@ -46,7 +46,7 @@ it('declares no mutable static properties anywhere in src', function (): void {
         $relativePath = str_replace([$sourcePath . DIRECTORY_SEPARATOR, '.php'], '', (string) $file->getRealPath());
 
         /** @var class-string $class */
-        $class = 'Jpeters8889\JourneyTrackerLaravel\\' . str_replace(DIRECTORY_SEPARATOR, '\\', $relativePath);
+        $class = 'JourneyTracker\JourneyTrackerLaravel\\' . str_replace(DIRECTORY_SEPARATOR, '\\', $relativePath);
 
         $reflection = new ReflectionClass($class);
 

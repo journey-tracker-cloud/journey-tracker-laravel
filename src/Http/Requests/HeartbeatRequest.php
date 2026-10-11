@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Http\Requests;
+namespace JourneyTracker\JourneyTrackerLaravel\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
-use Jpeters8889\JourneyTrackerLaravel\Rules\DecryptableToken;
-use Jpeters8889\JourneyTrackerLaravel\Support\JourneyToken;
-use Jpeters8889\JourneyTrackerLaravel\Support\RouteResolver;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedQuery;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
+use JourneyTracker\JourneyTrackerLaravel\Rules\DecryptableToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\JourneyToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\RouteResolver;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedQuery;
 
 class HeartbeatRequest extends FormRequest
 {

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
-use Jpeters8889\JourneyTrackerLaravel\Query\EventFilter;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Query\EventFilter;
 
 it('returns an empty array when no fields are set', function (): void {
     expect(new EventFilter()->toArray())->toBeEmpty();

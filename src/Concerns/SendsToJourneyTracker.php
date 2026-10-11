@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Concerns;
+namespace JourneyTracker\JourneyTrackerLaravel\Concerns;
 
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Enums\IngestType;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
+use JourneyTracker\JourneyTrackerLaravel\Enums\IngestType;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
 use Throwable;
 
 trait SendsToJourneyTracker

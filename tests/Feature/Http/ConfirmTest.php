@@ -7,7 +7,7 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Queue;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\ConfirmPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\ConfirmPageViewJob;
 
 it('forwards the visit id from the token so the platform can release the page view', function (): void {
     fakeConfirmEndpoint();

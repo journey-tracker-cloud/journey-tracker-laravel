@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Support;
+namespace JourneyTracker\JourneyTrackerLaravel\Support;
 
 use Illuminate\Support\Facades\Crypt;
 use InvalidArgumentException;

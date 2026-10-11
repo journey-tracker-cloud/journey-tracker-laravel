@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Http\Requests;
+namespace JourneyTracker\JourneyTrackerLaravel\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedConfirmationData;
-use Jpeters8889\JourneyTrackerLaravel\Rules\DecryptableToken;
-use Jpeters8889\JourneyTrackerLaravel\Support\JourneyToken;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedConfirmationData;
+use JourneyTracker\JourneyTrackerLaravel\Rules\DecryptableToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\JourneyToken;
 
 class ConfirmRequest extends FormRequest
 {

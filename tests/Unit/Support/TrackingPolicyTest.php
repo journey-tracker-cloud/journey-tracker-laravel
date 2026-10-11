@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Http\Request;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackingPolicy;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackingPolicy;
 
 it('tracks a plain GET request', function (): void {
     expect(new TrackingPolicy()->shouldTrackRequest(policyRequest()))->toBeTrue();

@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Routing\Router;
-use Jpeters8889\JourneyTrackerLaravel\Http\Controllers\EventStoreController;
-use Jpeters8889\JourneyTrackerLaravel\Http\Controllers\HeartbeatController;
+use JourneyTracker\JourneyTrackerLaravel\Http\Controllers\EventStoreController;
+use JourneyTracker\JourneyTrackerLaravel\Http\Controllers\HeartbeatController;
 
 it('registers the named endpoint routes at the configured uris', function (string $name, string $configKey, string $controller): void {
     $route = app(Router::class)->getRoutes()->getByName($name);

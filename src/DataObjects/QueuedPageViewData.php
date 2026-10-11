@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\DataObjects;
+namespace JourneyTracker\JourneyTrackerLaravel\DataObjects;
 
 final readonly class QueuedPageViewData
 {

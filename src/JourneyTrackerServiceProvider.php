@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel;
+namespace JourneyTracker\JourneyTrackerLaravel;
 
 use Composer\InstalledVersions;
 use Illuminate\Http\Client\PendingRequest;
@@ -59,7 +59,7 @@ class JourneyTrackerServiceProvider extends PackageServiceProvider
 
     protected function clientHeader(): string
     {
-        $version = InstalledVersions::getPrettyVersion('jpeters8889/journey-tracker-laravel');
+        $version = InstalledVersions::getPrettyVersion('journey-tracker/journey-tracker-laravel');
 
         return 'laravel/' . ($version ?? 'unknown');
     }

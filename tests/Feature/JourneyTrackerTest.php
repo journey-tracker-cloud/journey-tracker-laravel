@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker as JourneyTrackerFacade;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryBuilder;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker as JourneyTrackerFacade;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryBuilder;
 
 it('exposes a token during a tracked request', function (): void {
     fakePageViewEndpoint();

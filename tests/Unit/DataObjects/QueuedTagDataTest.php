@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedTagData;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedTagData;
 
 it('serialises to the wire shape the api expects', function (): void {
     $data = new QueuedTagData('session-abc', 'Shop Purchase');

@@ -3,8 +3,8 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Support\JourneyToken;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedRequest;
+use JourneyTracker\JourneyTrackerLaravel\Support\JourneyToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedRequest;
 
 it('does nothing when asked to persist a visit outside a tracked request', function (): void {
     fakePageViewEndpoint();

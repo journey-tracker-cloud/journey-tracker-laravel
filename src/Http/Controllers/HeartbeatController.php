@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Http\Controllers;
+namespace JourneyTracker\JourneyTrackerLaravel\Http\Controllers;
 
 use Illuminate\Http\Response;
-use Jpeters8889\JourneyTrackerLaravel\Http\Requests\HeartbeatRequest;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageViewJob;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Support\RouteResolver;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedQuery;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackingPolicy;
+use JourneyTracker\JourneyTrackerLaravel\Http\Requests\HeartbeatRequest;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Support\RouteResolver;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedQuery;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackingPolicy;
 
 class HeartbeatController
 {

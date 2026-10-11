@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryResponse;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryResponse;
 
 it('returns the value for a given alias via get()', function (): void {
     $response = new QueryResponse(['signups' => 42]);

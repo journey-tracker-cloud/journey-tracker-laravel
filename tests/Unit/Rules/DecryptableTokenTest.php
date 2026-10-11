@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Encryption\Encrypter;
-use Jpeters8889\JourneyTrackerLaravel\Rules\DecryptableToken;
+use JourneyTracker\JourneyTrackerLaravel\Rules\DecryptableToken;
 
 beforeEach(function (): void {
     $this->encrypter = new Encrypter(Encrypter::generateKey('aes-256-cbc'), 'aes-256-cbc');

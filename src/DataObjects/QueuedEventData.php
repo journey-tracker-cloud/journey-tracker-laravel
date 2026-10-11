@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\DataObjects;
+namespace JourneyTracker\JourneyTrackerLaravel\DataObjects;
 
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
 
 final readonly class QueuedEventData
 {

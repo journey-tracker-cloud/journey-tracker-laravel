@@ -3,10 +3,10 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Queue;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\AssignTagJob;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageEventJob;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageViewJob;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\AssignTagJob;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageEventJob;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
 
 it('routes a page view onto the configured queue', function (): void {
     config(['journey-tracker-laravel.queue' => 'analytics']);

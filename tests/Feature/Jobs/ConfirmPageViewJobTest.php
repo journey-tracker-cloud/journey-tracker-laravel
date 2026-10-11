@@ -5,13 +5,13 @@ declare(strict_types=1);
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedConfirmationData;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\ConfirmPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedConfirmationData;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\ConfirmPageViewJob;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Event;
-use Jpeters8889\JourneyTrackerLaravel\Enums\IngestType;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
+use JourneyTracker\JourneyTrackerLaravel\Enums\IngestType;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
 
 it('posts the confirmation to the api', function (): void {
     fakeConfirmEndpoint();

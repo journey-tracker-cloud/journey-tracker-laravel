@@ -1,6 +1,6 @@
 {
     "$schema": "https://getcomposer.org/schema.json",
-    "name": "jpeters8889/journey-tracker-laravel",
+    "name": "journey-tracker/journey-tracker-laravel",
     "type": "library",
     "description": "Server-side Laravel SDK for journey-tracker.cloud: automatic page view tracking, custom events, journey tagging, and a fluent query builder for the data you collect.",
     "keywords": [
@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jpeters8889\\JourneyTrackerLaravel\\": "src/"
+            "JourneyTracker\\JourneyTrackerLaravel\\": "src/"
         }
     },
     "autoload-dev": {
@@ -41,8 +41,8 @@
         }
     },
     "support": {
-        "issues": "https://github.com/jpeters8889/journey-tracker-laravel/issues",
-        "source": "https://github.com/jpeters8889/journey-tracker-laravel"
+        "issues": "https://github.com/journey-tracker-cloud/journey-tracker-laravel/issues",
+        "source": "https://github.com/journey-tracker-cloud/journey-tracker-laravel"
     },
     "authors": [
         {
@@ -82,10 +82,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jpeters8889\\JourneyTrackerLaravel\\JourneyTrackerServiceProvider"
+                "JourneyTracker\\JourneyTrackerLaravel\\JourneyTrackerServiceProvider"
             ],
             "aliases": {
-                "JourneyTracker": "Jpeters8889\\JourneyTrackerLaravel\\Facades\\JourneyTracker"
+                "JourneyTracker": "JourneyTracker\\JourneyTrackerLaravel\\Facades\\JourneyTracker"
             }
         }
     },

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Support\Visit;
+use JourneyTracker\JourneyTrackerLaravel\Support\Visit;
 
 it('persists only the fields a later request needs', function (): void {
     $visit = new Visit('visit-abc', 1787577135, wasNew: true);

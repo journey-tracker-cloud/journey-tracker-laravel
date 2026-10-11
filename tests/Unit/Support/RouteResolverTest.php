@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
-use Jpeters8889\JourneyTrackerLaravel\Support\RouteResolver;
+use JourneyTracker\JourneyTrackerLaravel\Support\RouteResolver;
 
 it('resolves the name and uri of a static route', function (): void {
     Route::get('blog', fn (): string => 'ok')->name('blog.index');

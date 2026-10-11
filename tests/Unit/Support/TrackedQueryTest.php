@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedQuery;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedQuery;
 
 it('keeps page and cursor by default', function (): void {
     expect(new TrackedQuery()->filter(['page' => '2', 'cursor' => 'abc', 'fbclid' => 'xyz']))

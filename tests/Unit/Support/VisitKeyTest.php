@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Session\ArraySessionHandler;
 use Illuminate\Session\Store;
 use Illuminate\Support\Facades\Cache;
-use Jpeters8889\JourneyTrackerLaravel\Support\VisitKey;
+use JourneyTracker\JourneyTrackerLaravel\Support\VisitKey;
 
 it('mints a key for a session it has never seen', function (): void {
     $visit = visitKeyOn($session = visitSession())->resolve();

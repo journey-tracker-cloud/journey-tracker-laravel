@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Support\Facades\Crypt;
-use Jpeters8889\JourneyTrackerLaravel\Support\JourneyToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\JourneyToken;
 
 it('reads a visit id and a path out of a payload', function (): void {
     $token = JourneyToken::fromPayload(['visit_id' => 'visit-abc', 'path' => 'blog/my-post']);

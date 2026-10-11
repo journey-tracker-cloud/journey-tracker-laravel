@@ -22,7 +22,7 @@ lasts, and the worker is what actually sends anything. With no worker running, n
 ## Installation
 
 ```bash
-composer require jpeters8889/journey-tracker-laravel
+composer require journey-tracker/journey-tracker-laravel
 ```
 
 Put your app's key in `.env`. You'll find it in Journey Tracker under **Manage → API Keys**:
@@ -38,7 +38,7 @@ lives in the session, and appending does that:
 // bootstrap/app.php
 ->withMiddleware(function (Middleware $middleware): void {
     $middleware->web(append: [
-        \Jpeters8889\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware::class,
+        \JourneyTracker\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware::class,
     ]);
 })
 ```
@@ -95,7 +95,7 @@ navigation and would describe the request the script made rather than the page t
 Sending is fire and forget. The queued jobs swallow every failure, nothing is retried, and your
 request path is never affected by what happens to us. What's new is that they tell you about it.
 
-Two events, both in `Jpeters8889\JourneyTrackerLaravel\Events`:
+Two events, both in `JourneyTracker\JourneyTrackerLaravel\Events`:
 
 `JourneyTrackerBlocked` is dispatched for one thing only — your team has used all of its credits for
 the billing period and we've stopped accepting data until the period rolls over or you add more. It
@@ -107,7 +107,7 @@ didn't complete — connection refused, timeout, DNS), and the `Throwable`.
 
 ```php
 use Illuminate\Support\Facades\Event;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
 
 Event::listen(JourneyTrackerBlocked::class, function (JourneyTrackerBlocked $event): void {
     Log::warning('Journey Tracker has paused ingest', ['type' => $event->type->value]);
@@ -133,7 +133,7 @@ its errors from the call itself.
 ## Usage
 
 ```php
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker;
 
 // mark the journey this visitor is on
 JourneyTracker::tag('shop-purchase');

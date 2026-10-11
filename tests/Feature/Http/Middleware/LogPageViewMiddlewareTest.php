@@ -6,8 +6,8 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
-use Jpeters8889\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
 
 it('logs a page view carrying the full payload', function (): void {
     fakePageViewEndpoint();

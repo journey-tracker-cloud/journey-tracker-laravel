@@ -1,2 +1,2 @@
 providers:
-  - Jpeters8889\JourneyTrackerLaravel\JourneyTrackerServiceProvider
+  - JourneyTracker\JourneyTrackerLaravel\JourneyTrackerServiceProvider

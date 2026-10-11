@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedEventData;
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedEventData;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
 
 it('serialises to the wire shape the api expects', function (): void {
     $data = new QueuedEventData(

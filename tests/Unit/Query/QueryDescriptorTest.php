@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
-use Jpeters8889\JourneyTrackerLaravel\Query\EventFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\PageFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryDescriptor;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Query\EventFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\PageFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryDescriptor;
 
 it('always emits the has key even with no filters', function (): void {
     $descriptor = new QueryDescriptor('my_metric');

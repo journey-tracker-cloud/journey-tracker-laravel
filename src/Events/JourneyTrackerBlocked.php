@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Events;
+namespace JourneyTracker\JourneyTrackerLaravel\Events;
 
-use Jpeters8889\JourneyTrackerLaravel\Enums\IngestType;
+use JourneyTracker\JourneyTrackerLaravel\Enums\IngestType;
 
 final readonly class JourneyTrackerBlocked
 {

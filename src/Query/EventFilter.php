@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Query;
+namespace JourneyTracker\JourneyTrackerLaravel\Query;
 
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
 
 class EventFilter
 {

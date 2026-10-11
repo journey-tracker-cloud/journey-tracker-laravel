@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Jobs;
+namespace JourneyTracker\JourneyTrackerLaravel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
-use Jpeters8889\JourneyTrackerLaravel\Enums\IngestType;
-use Jpeters8889\JourneyTrackerLaravel\Concerns\SendsToJourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Support\VisitKey;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
+use JourneyTracker\JourneyTrackerLaravel\Enums\IngestType;
+use JourneyTracker\JourneyTrackerLaravel\Concerns\SendsToJourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Support\VisitKey;
 
 class LogPageViewJob implements ShouldQueue
 {

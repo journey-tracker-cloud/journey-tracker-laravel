@@ -5,7 +5,7 @@ declare(strict_types=1);
 use Illuminate\Encryption\Encrypter;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
 
 it('accepts an event and forwards the whole payload', function (): void {
     fakeEventEndpoint();

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel;
+namespace JourneyTracker\JourneyTrackerLaravel;
 
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedTagData;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\AssignTagJob;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryBuilder;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedRequest;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackerScript;
-use Jpeters8889\JourneyTrackerLaravel\Support\VisitKey;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedTagData;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\AssignTagJob;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryBuilder;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedRequest;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackerScript;
+use JourneyTracker\JourneyTrackerLaravel\Support\VisitKey;
 
 class JourneyTracker
 {

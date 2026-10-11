@@ -5,12 +5,12 @@ declare(strict_types=1);
 use Illuminate\Http\Client\ConnectionException;
 use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Http;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\AssignTagJob;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\AssignTagJob;
 use Illuminate\Http\Client\RequestException;
 use Illuminate\Support\Facades\Event;
-use Jpeters8889\JourneyTrackerLaravel\Enums\IngestType;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
-use Jpeters8889\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
+use JourneyTracker\JourneyTrackerLaravel\Enums\IngestType;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerBlocked;
+use JourneyTracker\JourneyTrackerLaravel\Events\JourneyTrackerFailed;
 
 it('posts the tag payload to the api', function (): void {
     fakeTagEndpoint();

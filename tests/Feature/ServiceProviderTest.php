@@ -6,8 +6,8 @@ use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\ServiceProvider;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTrackerServiceProvider;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTrackerServiceProvider;
 
 it('binds the journey-tracker alias to the tracker', function (): void {
     expect(app('journey-tracker'))->toBeInstanceOf(JourneyTracker::class);

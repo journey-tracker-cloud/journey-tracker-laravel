@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Rules;
+namespace JourneyTracker\JourneyTrackerLaravel\Rules;
 
 use Closure;
 use Illuminate\Contracts\Encryption\Encrypter;
 use Illuminate\Contracts\Validation\ValidationRule;
-use Jpeters8889\JourneyTrackerLaravel\Support\JourneyToken;
+use JourneyTracker\JourneyTrackerLaravel\Support\JourneyToken;
 use Throwable;
 
 class DecryptableToken implements ValidationRule

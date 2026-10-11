@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Http\Controllers;
+namespace JourneyTracker\JourneyTrackerLaravel\Http\Controllers;
 
 use Illuminate\Http\Response;
-use Jpeters8889\JourneyTrackerLaravel\Http\Requests\EventStoreRequest;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageEventJob;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Http\Requests\EventStoreRequest;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageEventJob;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
 
 class EventStoreController
 {

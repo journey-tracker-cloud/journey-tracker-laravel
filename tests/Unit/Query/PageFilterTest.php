@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\Query\PageFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\PageFilter;
 
 it('returns an empty array when no fields are set', function (): void {
     expect(new PageFilter()->toArray())->toBeEmpty();

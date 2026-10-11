@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Jpeters8889\JourneyTrackerLaravel\Http\Middleware;
+namespace JourneyTracker\JourneyTrackerLaravel\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageViewJob;
-use Jpeters8889\JourneyTrackerLaravel\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedQuery;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackedRequest;
-use Jpeters8889\JourneyTrackerLaravel\Support\TrackingPolicy;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedQuery;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackedRequest;
+use JourneyTracker\JourneyTrackerLaravel\Support\TrackingPolicy;
 use Symfony\Component\HttpFoundation\Response;
 
 class LogPageViewMiddleware

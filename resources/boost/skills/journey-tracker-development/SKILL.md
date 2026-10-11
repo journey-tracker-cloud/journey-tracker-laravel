@@ -1,9 +1,9 @@
 ---
 name: journey-tracker-development
-description: "Use when working with journey-tracker-laravel, the server side SDK for journey-tracker.cloud visitor analytics. Trigger whenever the query mentions journey tracker, journey tracking, the JourneyTracker facade, `Jpeters8889\\JourneyTrackerLaravel`, `config/journey-tracker-laravel.php`, LogPageViewMiddleware, or the journeyTracker Blade directive. Tasks include installing and configuring the SDK, excluding routes from tracking with dont-track, tagging a journey after a conversion or purchase, wiring up client side event tracking against the event endpoint, and querying collected page view and event counts with the fluent query builder for metrics jobs, backfill commands and dashboards. Do not trigger for Google Analytics, Laravel Nightwatch, Pulse, Telescope, or generic application logging."
+description: "Use when working with journey-tracker-laravel, the server side SDK for journey-tracker.cloud visitor analytics. Trigger whenever the query mentions journey tracker, journey tracking, the JourneyTracker facade, `JourneyTracker\\JourneyTrackerLaravel`, `config/journey-tracker-laravel.php`, LogPageViewMiddleware, or the journeyTracker Blade directive. Tasks include installing and configuring the SDK, excluding routes from tracking with dont-track, tagging a journey after a conversion or purchase, wiring up client side event tracking against the event endpoint, and querying collected page view and event counts with the fluent query builder for metrics jobs, backfill commands and dashboards. Do not trigger for Google Analytics, Laravel Nightwatch, Pulse, Telescope, or generic application logging."
 license: MIT
 metadata:
-  author: jpeters8889
+  author: journey-tracker-cloud
 ---
 
 # Journey Tracker Development
@@ -15,7 +15,7 @@ back out. Everything it sends is dispatched to the queue, so nothing blocks a re
 ## Setup
 
 ```bash
-composer require jpeters8889/journey-tracker-laravel
+composer require journey-tracker/journey-tracker-laravel
 ```
 
 Set the app's key in `.env`. Without it every send goes out unauthenticated and is discarded at the
@@ -39,7 +39,7 @@ appending does this correctly:
 // bootstrap/app.php
 ->withMiddleware(function (Middleware $middleware): void {
     $middleware->web(append: [
-        \Jpeters8889\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware::class,
+        \JourneyTracker\JourneyTrackerLaravel\Http\Middleware\LogPageViewMiddleware::class,
     ]);
 })
 ```
@@ -130,7 +130,7 @@ counts a change to them as a new page view. Never add parameters carrying secret
 Attach a label to the current visitor's journey — useful for marking a conversion:
 
 ```php
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker;
 
 JourneyTracker::tag('Shop Purchase');
 ```
@@ -157,7 +157,7 @@ current request, or `null` when the request is not being tracked. It is stable f
 request — repeated calls return the identical string.
 
 ```php
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker;
 
 // Inertia — in your HandleInertiaRequests middleware or response builder
 Inertia::share('journey.token', fn (): ?string => JourneyTracker::token());
@@ -270,11 +270,11 @@ Listen for them like any other event. Neither is dispatched when a send succeeds
 one request fetches them all.
 
 ```php
-use Jpeters8889\JourneyTrackerLaravel\Enums\EventType;
-use Jpeters8889\JourneyTrackerLaravel\Facades\JourneyTracker;
-use Jpeters8889\JourneyTrackerLaravel\Query\EventFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\PageFilter;
-use Jpeters8889\JourneyTrackerLaravel\Query\QueryDescriptor;
+use JourneyTracker\JourneyTrackerLaravel\Enums\EventType;
+use JourneyTracker\JourneyTrackerLaravel\Facades\JourneyTracker;
+use JourneyTracker\JourneyTrackerLaravel\Query\EventFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\PageFilter;
+use JourneyTracker\JourneyTrackerLaravel\Query\QueryDescriptor;
 
 $metrics = JourneyTracker::query()
     ->today($date)
@@ -361,7 +361,7 @@ fails. Either pin `QUEUE_CONNECTION=sync` in `phpunit.xml`, or assert the dispat
 
 ```php
 use Illuminate\Support\Facades\Queue;
-use Jpeters8889\JourneyTrackerLaravel\Jobs\LogPageViewJob;
+use JourneyTracker\JourneyTrackerLaravel\Jobs\LogPageViewJob;
 
 it('records a page view', function (): void {
     Queue::fake();

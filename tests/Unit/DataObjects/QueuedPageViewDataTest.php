@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Jpeters8889\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
+use JourneyTracker\JourneyTrackerLaravel\DataObjects\QueuedPageViewData;
 
 it('serialises to the wire shape the api expects', function (): void {
     $data = new QueuedPageViewData('session-abc', 'blog/my-post', 'blog.show', 'blog/{post}', 1787577135, 'JourneyBot/1.0');
